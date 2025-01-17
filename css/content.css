@@ -1,0 +1,66 @@
+/* content.css */
+.main-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: 40px;
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.achievements {
+    list-style: none;
+}
+
+.achievements li {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.achievements li:hover {
+    transform: translateY(-2px);
+}
+
+.achievement-title {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.achievement-content {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    margin: 10px 0;
+}
+
+.impact-factor {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.link {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}

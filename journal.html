@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논문 실적 - IoT Security Laboratory</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav id="main-nav" class="bg-white shadow-md fixed w-full z-10">
+        <div class="container">
+            <div class="flex items-center justify-between h-full">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-3xl font-semibold text-gray-800">IoT Security Lab</a>
+                </div>
+                <div class="nav-menu hidden md:flex items-center">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-gray-900">back to Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="pt-24 pb-20">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl font-bold text-center mb-16">연구실 실적</h1>
+            
+            <!-- 수상 실적 섹션 -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-semibold mb-8 text-emerald-600 border-b-2 border-emerald-600 pb-2">수상 실적</h2>
+                <div class="space-y-6">
+                    <!-- 2024년 수상 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold mb-3">2024</span>
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="text-xl font-semibold mt-2">차세대 통신 COSS 협의회장상</h3>
+                                <p class="text-gray-600 mt-1">김찬혁, 임진한</p>
+                                <p class="text-gray-500 mt-1 text-sm">COSS 2024</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mt-2">2024 동계 학술 대회 논문 우수상</h3>
+                                <p class="text-gray-600 mt-1">김찬혁, 김형엽, 위한샘, 이옥연</p>
+                                <p class="text-gray-500 mt-1 text-sm">한국정보보호학회</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 논문 목록 섹션 -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-semibold mb-8 text-emerald-600 border-b-2 border-emerald-600 pb-2">논문 목록</h2>
+                
+                <!-- Year 2024 -->
+                <div class="mb-12">
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                        <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold mb-3">2024</span>
+                        <div class="space-y-6">
+                            <div>
+                                <span class="text-sm text-emerald-600 font-semibold">국제 저널</span>
+                                <h3 class="text-xl font-semibold mt-2">5G 특화망 드론 운영 시스템 중 인증 시스템 보안</h3>
+                                <p class="text-gray-600 mt-2">김형엽, 위한샘, 이옥연</p>
+                                <p class="text-gray-500 mt-2 text-sm">Journal of Information Security, Vol. 24, No. 1, pp. 123-456</p>
+                            </div>
+                            <div>
+                                <span class="text-sm text-emerald-600 font-semibold">정보보호학회</span>
+                                <h3 class="text-xl font-semibold mt-2">5G 특화망과 M-BcN망 연동 시 모바일 업무 환경 보안 기법 연구</h3>
+                                <p class="text-gray-600 mt-2">김찬혁, 김형엽, 위한샘, 이옥연</p>
+                                <p class="text-gray-500 mt-2 text-sm">한국정보보호학회 논문지, Vol. 34, No. 2, pp. 789-012</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 2023 -->
+                <div class="mb-12">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold mb-3">2023</span>
+                        <div class="space-y-6">
+                            <div>
+                                <span class="text-sm text-emerald-600 font-semibold">국제 컨퍼런스</span>
+                                <h3 class="text-xl font-semibold mt-2">드론 통신 보안을 위한 경량 암호화 프로토콜 설계</h3>
+                                <p class="text-gray-600 mt-2">위한샘, 이옥연</p>
+                                <p class="text-gray-500 mt-2 text-sm">International Conference on Security, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <div class="fixed bottom-8 right-8">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                class="bg-emerald-600 text-white p-3 rounded-full shadow-lg hover:bg-emerald-700 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        // Back to Top 버튼 표시/숨김 로직
+        window.onscroll = function() {
+            const backToTopButton = document.querySelector('.fixed.bottom-8.right-8');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 네비게이션 바 크기 조절*/
+#main-nav {
+    height: 80px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+#main-nav .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 1400px; /* 컨테이너 최대 너비 증가 */
+}
+
+.a {
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+/* 네비게이션 메뉴 스타일 */
+.nav-menu {
+    display: flex;
+    gap: 3rem;  /* 메뉴 항목 사이 간격 증가 */
+    padding-left: 4rem; /* 로고와 메뉴 사이 간격 */
+}
+
+/* Navigation Styles */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #10B981;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+body {
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(1, 16, 63, 0.9) 0%, rgba(135, 157, 192, 0.8) 100%),
+                url('/images/IoTbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+}
+
+/* Card Styles */
+.publication-card {
+    transition: transform 0.3s ease;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.publication-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 팀원 카드 스타일 */
+.team-member-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-member-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 이미지 비율 유지 */
+    transition: transform 0.3s ease;
+}
+
+.team-member-card:hover img {
+    transform: scale(1.05); /* 호버 시 이미지 살짝 확대 */
+}
+
+.team-member-card .h-72 {
+    background-color: #f8f9fa;  /* 이미지 배경색 */
+}
+
+/* Section Styles */
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Contact Section */
+.contact-card {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.more-button-container {
+    display: flex;
+    justify-content: center;  /* 중앙 정렬로 변경 */
+    padding: 2rem 0;
+    margin-top: 2rem;
+    width: 100%;             /* 전체 너비 사용 */
+}
+
+.more-button-link {
+    display: inline-flex;
+    align-items: center;
+    color: #059669; /* emerald-600 */
+    transition: color 0.2s;
+    margin-left: auto;       /* 왼쪽 자동 여백으로 오른쪽 정렬 */
+    margin-right: 8rem;      /* 오른쪽 여백 추가 */
+}
+
+.more-button-link:hover {
+    color: #047857; /* emerald-700 */
+}
+
+.more-button-link span {
+    margin-right: 0.5rem;
+}
+
+/* SVG 아이콘 스타일링 */
+.more-button-link svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+    .more-button-link {
+        margin-right: 2rem;  /* 모바일에서는 여백 줄이기 */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 40px;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+}
+
+/* 기존 style.css 파일 맨 아래에 추가 */
+
+/* 모바일 대응 스타일 */
+@media screen and (max-width: 768px) {
+    /* 컨테이너 여백 조정 */
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* 네비게이션 메뉴 */
+    .nav-menu {
+        display: none;
+    }
+
+    /* 모바일 그리드 조정 */
+    .grid-cols-1,
+    .grid-cols-2,
+    .grid-cols-3,
+    .grid-cols-4,
+    .md\:grid-cols-2,
+    .md\:grid-cols-3,
+    .lg\:grid-cols-3,
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    /* 섹션 간격 조정 */
+    .mb-16 {
+        margin-bottom: 2rem !important;
+    }
+
+    .gap-8 {
+        gap: 1rem !important;
+    }
+
+    /* 텍스트 크기 조정 */
+    .text-4xl {
+        font-size: 2rem !important;
+    }
+
+    .text-3xl {
+        font-size: 1.75rem !important;
+    }
+
+    .text-2xl {
+        font-size: 1.5rem !important;
+    }
+
+    .text-xl {
+        font-size: 1.25rem !important;
+    }
+}
+
+/* 태블릿 대응 스타일 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
