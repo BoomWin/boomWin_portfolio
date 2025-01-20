@@ -78,7 +78,7 @@ body {
 .hero {
     position: relative;
     min-height: 100vh;
-    background-image: url('../images/circuit-background.jpg');
+    background-image: url('../images/background-image.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -576,6 +576,20 @@ section {
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
+}
+/* 설명 추가 */
+.project-description {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 12px 0;
+    line-height: 1.5;
+}
+/* 모바일 대응을 위한 반응형 스타일 */
+@media (max-width: 768px) {
+    .project-description {
+        font-size: 0.9rem;
+        margin: 8px 0;
+    }
 }
 
 /* Career Section */
