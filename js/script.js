@@ -4,6 +4,7 @@ const navLinks = document.querySelectorAll('.nav-menu a');
 const heroButton = document.querySelector('.hero-button');
 const projectFilter = document.getElementById('projectFilter');
 
+
 // Projects Data
 const projectsData = [
     {
@@ -84,7 +85,6 @@ function renderProjects(showMainOnly = false) {
                     <span>바로가기</span>
                     <span>→</span>
                 </a>
-                <button class="readme-button">README</button>
             </div>
         `;
         
@@ -193,6 +193,82 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             }
+        });
+    });
+});
+
+// Memories Filter Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const memoryCards = document.querySelectorAll('.memory-card');
+
+    // Filter functionality
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            memoryCards.forEach(card => {
+                const categories = card.getAttribute('data-category').split(' ');
+                
+                if (filterValue === 'all' || categories.includes(filterValue)) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+
+    // Initialize Masonry layout for memories grid
+    const memoriesGrid = document.querySelector('.memories-grid');
+    let masonry = null;
+
+    // Function to initialize or reload masonry
+    function initMasonry() {
+        if (masonry) {
+            masonry.destroy();
+        }
+
+        masonry = new Masonry(memoriesGrid, {
+            itemSelector: '.memory-card',
+            columnWidth: '.memory-card',
+            percentPosition: true,
+            transitionDuration: '0.3s'
+        });
+    }
+
+    // Initialize masonry after images are loaded
+    window.addEventListener('load', initMasonry);
+
+    // Reload masonry after filtering
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            setTimeout(initMasonry, 310);
+        });
+    });
+
+    // Award cards hover effect
+    const awardCards = document.querySelectorAll('.award-card');
+    awardCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-5px)';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
         });
     });
 });

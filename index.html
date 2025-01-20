@@ -3,32 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>BoomWin</title>
+     <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav">
         <div class="container">
-            <a href="#" class="nav-logo">Portfolio</a>
+            <a href="#" class="nav-logo">BoomWin</a>
             <div class="nav-menu">
                 <a href="#about">About me</a>
                 <a href="#skills">Skills</a>
                 <a href="#archiving">Archiving</a>
                 <a href="#projects">Projects</a>
                 <a href="#career">Career</a>
+                <a href="#awards">Awards</a>
+                <a href="#memories">Memories</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1 class="hero-title">- ChanHyuk Kim -</h1>
-            <h2 class="hero-subtitle">Security Engineer & Developer</h2>
-            <p class="hero-text">Hi.<br>I'm Security Engineer & Developer</p>
-            <button class="hero-button">More ↓</button>
+        <div class="hero-content">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="/images/chanhyuk.jpg" alt="My Profile" />
+                </div>
+                <div class="profile-info">
+                    <h1 class="hero-title">ChanHyuk Kim</h1>
+                    <h2 class="hero-subtitle">Security Engineer & Developer</h2>
+                    <p class="hero-description">Hi. I'm Security Engineer & Developer with a passion for solving complex problems and building secure solutions.</p>
+                    <button class="hero-button">More ↓</button>
+                </div>
+            </div>
         </div>
+        <div class="hero-overlay"></div>
     </section>
 
     <!-- About Section -->
@@ -189,26 +205,22 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+   <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="icon">🔗</span>
-                    PROJECTS
-                </h2>
-                <div class="projects-filter">
-                    <label class="filter-checkbox">
-                        주요 프로젝트만 보기 
-                        <input type="checkbox" id="projectFilter" checked>
-                        <span class="checkmark">✓</span>
-                    </label>
-                </div>
+            <h2 class="section-title">
+                <span class="icon">🔗</span>
+                PROJECTS
+            </h2>
+            <div class="projects-filter">
+                <label class="filter-checkbox">
+                    주요 프로젝트만 보기 
+                    <input type="checkbox" id="projectFilter" checked>
+                    <span class="checkmark">✓</span>
+                </label>
             </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    
-                </div>
+                <!-- Project cards will be dynamically rendered here by JavaScript -->
             </div>
         </div>
     </section>
@@ -222,23 +234,17 @@
             </h2>
 
             <div class="career-timeline">
-                <!-- IoT 보안 연구실 -->
                 <div class="career-item">
                     <div class="company-logo">
                         <img src="/images/logo.jpg.png" alt="IoT Security Lab">
                     </div>
                     <div class="career-content">
                         <h3>IoT Security Lab</h3>
-                        <span class="period">2023.03 - 2024.10 (1년 8개월)</span>
-                        <div class="description">"차세대 이동통신 보안 기술 연구 및 개발"</div>
-                        
-                        <div class="role-tags">
-                            <span class="role-tag">연구원</span>
-                            <span class="role-tag">정보보안</span>
-                            <span class="role-tag">암호모듈 개발</span>
-                        </div>
+                        <span class="career-period">2023.03 - 2024.10 (1년 8개월)</span>
+                        <p class="career-description">"차세대 이동통신 보안 기술 연구 및 개발"</p>
+                        <p class="career-subtitle">연구원 정보보안 암호모듈 개발</p>
 
-                        <div class="projects">
+                        <div class="career-projects">
                             <div class="project-entry">
                                 <h4>5G 특화망 보안 취약점 분석 및 대응방안 연구</h4>
                                 <span class="project-period">2024.03 - 2024.10</span>
@@ -259,8 +265,81 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- 추가 경력... -->
+    <!-- Awards Section -->
+    <section id="awards" class="awards-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">🏆</span>
+                AWARDS
+            </h2>
+            <div class="awards-grid">
+                <!-- Award Card 1 -->
+                <div class="award-card">
+                    <div class="award-year">2024</div>
+                    <div class="award-content">
+                        <div class="award-icon">🏆</div>
+                        <h3 class="award-title">대상</h3>
+                        <p class="award-subtitle">제 1회 국민대학교 정보보안 경진대회</p>
+                        <div class="award-details">
+                            <p>정보보안 솔루션 개발 부문 대상 수상</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Award Card 2 -->
+                <div class="award-card">
+                    <div class="award-year">2023</div>
+                    <div class="award-content">
+                        <div class="award-icon">🥈</div>
+                        <h3 class="award-title">우수상</h3>
+                        <p class="award-subtitle">2023 사이버보안 콘테스트</p>
+                        <div class="award-details">
+                            <p>암호화 알고리즘 최적화 부문 우수상 수상</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional award cards can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Memories Section -->
+    <section id="memories" class="memories-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">📸</span>
+                MEMORIES
+            </h2>
+            <div class="memories-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="2024">2024</button>
+                <button class="filter-btn" data-filter="2023">2023</button>
+                <button class="filter-btn" data-filter="lab">연구실</button>
+                <button class="filter-btn" data-filter="contest">대회</button>
+            </div>
+            <div class="memories-grid">
+                <!-- Memory Card 1 -->
+                <div class="memory-card" data-category="2024 lab">
+                    <img src="/images/chanhyuk.jpg" alt="연구실 MT" class="memory-img">
+                    <div class="memory-overlay">
+                        <h3>연구실 MT</h3>
+                        <p>즐거웠던 연구실 MT에서의 한 장면</p>
+                        <span class="memory-date">2024.03.15</span>
+                    </div>
+                </div>
+                <!-- Memory Card 2 -->
+                <div class="memory-card" data-category="2023 contest">
+                    <img src="./images/chanhyuk.jpg" alt="보안 콘테스트" class="memory-img">
+                    <div class="memory-overlay">
+                        <h3>사이버보안 콘테스트</h3>
+                        <p>팀원들과 함께한 열정적인 순간</p>
+                        <span class="memory-date">2023.11.20</span>
+                    </div>
+                </div>
+                <!-- Additional memory cards can be added here -->
             </div>
         </div>
     </section>
