@@ -1,251 +1,809 @@
-/* style.css */
+/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* 네비게이션 바 크기 조절*/
-#main-nav {
-    height: 80px;
-    border-bottom: 2px solid #e5e7eb;
-}
-
-#main-nav .container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    max-width: 1400px; /* 컨테이너 최대 너비 증가 */
-}
-
-.a {
-    width: 100%;
-    padding-bottom: 30px;
-}
-
-/* 네비게이션 메뉴 스타일 */
-.nav-menu {
-    display: flex;
-    gap: 3rem;  /* 메뉴 항목 사이 간격 증가 */
-    padding-left: 4rem; /* 로고와 메뉴 사이 간격 */
-}
-
-/* Navigation Styles */
-.nav-link {
-    position: relative;
-    padding: 0.5rem 1rem;
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: #10B981;
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
 
 body {
-    font-family: 'Noto Sans KR', Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-
-
-/* Hero Section */
-.hero-section {
-    background: linear-gradient(135deg, rgba(1, 16, 63, 0.9) 0%, rgba(135, 157, 192, 0.8) 100%),
-                url('/images/IoTbg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 60px;
-}
-
-/* Card Styles */
-.publication-card {
-    transition: transform 0.3s ease;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.publication-card:hover {
-    transform: translateY(-5px);
-}
-
-/* 팀원 카드 스타일 */
-.team-member-card {
-    display: flex;
-    flex-direction: column;
-}
-
-.team-member-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* 이미지 비율 유지 */
-    transition: transform 0.3s ease;
-}
-
-.team-member-card:hover img {
-    transform: scale(1.05); /* 호버 시 이미지 살짝 확대 */
-}
-
-.team-member-card .h-72 {
-    background-color: #f8f9fa;  /* 이미지 배경색 */
-}
-
-/* Section Styles */
-.section {
-    padding: 5rem 0;
-}
-
-.section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 20px;
 }
 
-/* Contact Section */
-.contact-card {
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background: white;
-    border-radius: 0.5rem;
-    padding: 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
 
-.more-button-container {
+.nav .container {
     display: flex;
-    justify-content: center;  /* 중앙 정렬로 변경 */
-    padding: 2rem 0;
-    margin-top: 2rem;
-    width: 100%;             /* 전체 너비 사용 */
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
 }
 
-.more-button-link {
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #FF6B6B;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background-image: url('../images/IoTbg.jpg');
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.hero-button {
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero-button:hover {
+    background: #FF5252;
+}
+
+/* Section Styles */
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #FF6B6B;
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    position: relative;
+    color: #333;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #FF6B6B;
+}
+
+/* Info Container Grid Layout */
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Info Item Styles */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+}
+
+/* Icon Styles */
+.info-icon {
+    font-size: 24px;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Content Styles */
+.info-content {
+    flex: 1;
+}
+
+.info-content h3 {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.info-entry {
+    margin: 8px 0;
+}
+
+/* Badge Styles */
+.info-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #FF6B6B;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.info-text {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+/* Education Specific Styles */
+.education-entry {
+    margin: 15px 0;
+}
+
+.education-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #FF6B6B;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.school-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin: 8px 0;
+}
+
+.major-name {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.period {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+.education-divider {
+    height: 1px;
+    background-color: #e9ecef;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .info-container {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+}
+/* Optional: Hover Effect */
+.info-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Skills Section */
+.skills {
+    background: #FFD43B;
+}
+
+.skills-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skill-category {
+    margin-bottom: 2rem;
+}
+
+.skill-category h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    padding: 0.5rem 1rem;
+    background: #f1f1f1;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Archiving Section */
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.archive-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.archive-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+/* Projects Section Styles */
+.projects-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.section-title .icon {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Filter Checkbox */
+.projects-filter {
+    margin: 30px 0;
+}
+
+.filter-checkbox {
     display: inline-flex;
     align-items: center;
-    color: #059669; /* emerald-600 */
-    transition: color 0.2s;
-    margin-left: auto;       /* 왼쪽 자동 여백으로 오른쪽 정렬 */
-    margin-right: 8rem;      /* 오른쪽 여백 추가 */
+    gap: 8px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-.more-button-link:hover {
-    color: #047857; /* emerald-700 */
+.filter-checkbox input {
+    display: none;
 }
 
-.more-button-link span {
-    margin-right: 0.5rem;
+.checkmark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: #007AFF;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.9rem;
 }
 
-/* SVG 아이콘 스타일링 */
-.more-button-link svg {
-    width: 1.5rem;
-    height: 1.5rem;
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+    padding: 0 20px;
 }
 
-/* 반응형 디자인을 위한 미디어 쿼리 */
+/* Project Card */
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.project-type {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+/* 메인 프로젝트 태그 스타일 */
+.project-type.main-project {
+    background-color: #FF3B30;
+    color: white;
+}
+
+/* 서브 프로젝트 태그 스타일 */
+.project-type.sub-project {
+    background-color: #868e96;
+    color: white;
+}
+
+.project-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 8px 0;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin: 12px 0;
+}
+
+.project-details {
+    list-style: none;
+    margin: 16px 0;
+}
+
+.project-details li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #444;
+    line-height: 1.5;
+}
+
+.project-details li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #007AFF;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.tech-tag {
+    padding: 4px 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.project-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    color: #007AFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.readme-button {
+    padding: 6px 16px;
+    background: #f1f1f1;
+    border: none;
+    border-radius: 4px;
+    color: #333;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* main project 필터 디자인 */
+.projects-filter {
+    text-align: right;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.filter-checkbox {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    color: #333;
+    user-select: none;
+}
+
+.filter-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-left: 8px;
+    transition: all 0.2s ease;
+}
+
+.filter-checkbox input[type="checkbox"]:checked ~ .checkmark {
+    background-color: #007AFF;
+    border-color: #007AFF;
+}
+
+.checkmark:after {
+    content: "✓";
+    position: absolute;
+    display: none;
+    color: white;
+    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.filter-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Hover effect */
+.filter-checkbox:hover .checkmark {
+    border-color: #007AFF;
+}
+
+.readme-button:hover {
+    background: #e5e5e5;
+}
+
 @media (max-width: 768px) {
-    .more-button-link {
-        margin-right: 2rem;  /* 모바일에서는 여백 줄이기 */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .project-card {
+        padding: 20px;
+    }
+}
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #FF6B6B;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: none;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+}
+
+.back-to-top:hover {
+    background: #FF5252;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Carrer Section Styles */
+.career-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.career-timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.career-item {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.company-logo {
+    flex-shrink: 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.career-content {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.career-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.period {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.description {
+    color: #444;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.role-tag {
+    background: #212529;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-entry {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #339af0;
+}
+
+.project-entry h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.project-period {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.project-entry p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .career-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .company-logo {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+    
+    .career-content {
+        padding: 20px;
     }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-section {
-        padding-top: 40px;
+    .career-item {
+        flex-direction: column;
+        padding: 20px;
     }
 
-    .container {
-        padding: 0 1rem;
+    .company-logo {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
     }
 
-    .section {
-        padding: 3rem 0;
-    }
-}
-
-/* 기존 style.css 파일 맨 아래에 추가 */
-
-/* 모바일 대응 스타일 */
-@media screen and (max-width: 768px) {
-    /* 컨테이너 여백 조정 */
-    .container {
-        padding: 0 1rem;
+    .company-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
     }
 
-    /* 네비게이션 메뉴 */
-    .nav-menu {
-        display: none;
-    }
-
-    /* 모바일 그리드 조정 */
-    .grid-cols-1,
-    .grid-cols-2,
-    .grid-cols-3,
-    .grid-cols-4,
-    .md\:grid-cols-2,
-    .md\:grid-cols-3,
-    .lg\:grid-cols-3,
-    .lg\:grid-cols-4 {
-        grid-template-columns: repeat(1, 1fr) !important;
-    }
-
-    /* 섹션 간격 조정 */
-    .mb-16 {
-        margin-bottom: 2rem !important;
-    }
-
-    .gap-8 {
-        gap: 1rem !important;
-    }
-
-    /* 텍스트 크기 조정 */
-    .text-4xl {
-        font-size: 2rem !important;
-    }
-
-    .text-3xl {
-        font-size: 1.75rem !important;
-    }
-
-    .text-2xl {
-        font-size: 1.5rem !important;
-    }
-
-    .text-xl {
-        font-size: 1.25rem !important;
+    .tech-badges {
+        text-align: center;
     }
 }
 
-/* 태블릿 대응 스타일 */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .lg\:grid-cols-3 {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
 
-    .lg\:grid-cols-4 {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
+/* github Design */
+.github-link {
+    margin-top: 10px;
+}
+
+.github-link a {
+    display: inline-flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.github-link a:hover {
+    color: #0066cc;
+}
+
+/* 화살표 애니메이션 효과 */
+.github-link a::after {
+    content: '→';
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.github-link a:hover::after {
+    transform: translateX(5px);
 }
