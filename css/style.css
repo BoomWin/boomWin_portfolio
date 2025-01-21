@@ -401,7 +401,7 @@ section {
 /* Projects Section */
 .projects-section {
     padding: 80px 0;
-    background-color: #fff;
+    background-color: #E2E2E2;
 }
 
 .projects-section .section-title {
@@ -723,7 +723,7 @@ section {
 /* Awards Section */
 .awards-section {
     padding: 80px 0;
-    background-color: #fff;
+    background-color: #E2E2E2;
 }
 
 .awards-grid {
@@ -757,7 +757,7 @@ section {
 /* Memories Section */
 .memories-section {
     padding: 60px 20px;
-    background-color: #fff;
+    background-color: #E2E2E2;
 }
 
 .memories-filter {
@@ -853,6 +853,146 @@ section {
 .memory-card:hover .memory-overlay {
     background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.6));
 }
+
+/* Friends Section Styles */
+.friends-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.friend-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.friend-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.friend-image {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #f0f0f0;
+}
+
+.friend-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.friend-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.friend-name {
+    font-family: var(--font-main);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.friend-title {
+    font-family: var(--font-sub);
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.friend-details {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.friend-company,
+.friend-location {
+    font-size: 0.9rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.friend-company::before {
+    content: "🏢";
+}
+
+.friend-location::before {
+    content: "📍";
+}
+
+.friend-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 16px 0;
+    padding: 0 12px;
+}
+
+.friend-social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border: 1px solid #0066cc;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #0066cc;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .friends-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .friend-card {
+        max-width: 100%;
+    }
+
+    .friend-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .friend-name {
+        font-size: 1.2rem;
+    }
+}
+
 
 /* Back to Top Button */
 .back-to-top {
