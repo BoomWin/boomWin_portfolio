@@ -3,32 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>BoomWin</title>
+     <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav">
         <div class="container">
-            <a href="#" class="nav-logo">Portfolio</a>
+            <a href="#" class="nav-logo">BoomWin</a>
             <div class="nav-menu">
                 <a href="#about">About me</a>
                 <a href="#skills">Skills</a>
                 <a href="#archiving">Archiving</a>
                 <a href="#projects">Projects</a>
                 <a href="#career">Career</a>
+                <a href="#awards">Awards</a>
+                <a href="#friends">Friends</a>
+                <a href="#memories">Memories</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1 class="hero-title">- ChanHyuk Kim -</h1>
-            <h2 class="hero-subtitle">Security Engineer & Developer</h2>
-            <p class="hero-text">Hi.<br>I'm Security Engineer & Developer</p>
-            <button class="hero-button">More ↓</button>
+        <div class="hero-content">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="/images/chanhyuk.jpg" alt="My Profile" />
+                </div>
+                <div class="profile-info">
+                    <h1 class="hero-title">ChanHyuk Kim</h1>
+                    <h2 class="hero-subtitle">Security Engineer & Developer</h2>
+                    <p class="hero-description">Hi. I'm Security Engineer & Developer with a passion for solving complex problems and building secure solutions.</p>
+                    <button class="hero-button">More ↓</button>
+                </div>
+            </div>
         </div>
+        <div class="hero-overlay"></div>
     </section>
 
     <!-- About Section -->
@@ -43,7 +60,7 @@
                         <h3>이름</h3>
                         <div class="info-entry">
                             <span class="info-badge">Name</span>
-                            <p class="info-text">김찬혁</p>
+                            <p class="school-name">김찬혁</p>
                         </div>
                     </div>
                 </div>
@@ -55,7 +72,7 @@
                         <h3>연락처</h3>
                         <div class="info-entry">
                             <span class="info-badge">Phone</span>
-                            <p class="info-text">010-7104-8126</p>
+                            <p class="school-name">010-7104-8126</p>
                         </div>
                     </div>
                 </div>
@@ -67,7 +84,7 @@
                         <h3>생년월일</h3>
                         <div class="info-entry">
                             <span class="info-badge">Birth</span>
-                            <p class="info-text">00.10.07</p>
+                            <p class="school-name">00.10.07</p>
                         </div>
                     </div>
                 </div>
@@ -79,7 +96,7 @@
                         <h3>이메일</h3>
                         <div class="info-entry">
                             <span class="info-badge">Email</span>
-                            <p class="info-text">20192223@kookmin.ac.kr</p>
+                            <p class="school-name">20192223@kookmin.ac.kr</p>
                         </div>
                     </div>
                 </div>
@@ -91,7 +108,7 @@
                         <h3>위치</h3>
                         <div class="info-entry">
                             <span class="info-badge">Location</span>
-                            <p class="info-text">서울특별시 강북구</p>
+                            <p class="school-name">경기도 안산시</p>
                         </div>
                     </div>
                 </div>
@@ -105,14 +122,14 @@
                             <span class="education-badge">석사과정</span>
                             <p class="school-name">국민대학교 대학원</p>
                             <p class="major-name">사이버보안학과</p>
-                            <span class="period">2024.03 ~ 현재</span>
+                            <span class="period">2025.03 ~ 현재</span>
                         </div>
                         <div class="education-divider"></div>
                         <div class="education-entry">
                             <span class="education-badge">학사</span>
                             <p class="school-name">국민대학교</p>
                             <p class="major-name">정보보안암호수학과</p>
-                            <span class="period">2020.03 ~ 2024.02</span>
+                            <span class="period">2019.03 ~ 2025.02</span>
                         </div>
                     </div>
                 </div>
@@ -125,34 +142,38 @@
         <div class="container">
             <h2 class="section-title">SKILLS</h2>
             <div class="skills-card">
-                <div class="skill-category">
-                    <h3>💻 Language</h3>
+                <div class="skill-category language">
+                    <h3>Language</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">JAVA</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag" data-level="90">C</span>
+                        <span class="skill-tag" data-level="85">JAVA</span>
+                        <span class="skill-tag" data-level="88">Python</span>
+                        <span class="skill-tag" data-level="80">JavaScript</span>
+                        <span class="skill-tag" data-level="85">HTML5</span>
+                        <span class="skill-tag" data-level="85">CSS3</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>🎨 Crypto</h3>
+                
+                <div class="skill-category crypto">
+                    <h3>Crypto</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">RSA</span>
-                        <span class="skill-tag">AES</span>
-                        <span class="skill-tag">PQC</span>
+                        <span class="skill-tag" data-level="90">RSA</span>
+                        <span class="skill-tag" data-level="85">AES</span>
+                        <span class="skill-tag" data-level="80">PQC</span>
+                        <span class="skill-tag" data-level="85">ECC</span>
+                        <span class="skill-tag" data-level="88">SSL / TLS</span>
+                        <span class="skill-tag" data-level="85">HASH</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>🎨 Utill</h3>
+                
+                <div class="skill-category util">
+                    <h3>Util</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Notion</span>
-                        <span class="skill-tag">Github</span>
-                        <span class="skill-tag">Slack</span>
+                        <span class="skill-tag" data-level="90">Notion</span>
+                        <span class="skill-tag" data-level="88">Github</span>
+                        <span class="skill-tag" data-level="85">Slack</span>
                     </div>
                 </div>
-                <!-- 추가 스킬 카테고리들... -->
             </div>
         </div>
     </section>
@@ -189,26 +210,22 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+   <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="icon">🔗</span>
-                    PROJECTS
-                </h2>
-                <div class="projects-filter">
-                    <label class="filter-checkbox">
-                        주요 프로젝트만 보기 
-                        <input type="checkbox" id="projectFilter" checked>
-                        <span class="checkmark">✓</span>
-                    </label>
-                </div>
+            <h2 class="section-title">
+                <span class="icon">🔗</span>
+                PROJECTS
+            </h2>
+            <div class="projects-filter">
+                <label class="filter-checkbox">
+                    주요 프로젝트만 보기 
+                    <input type="checkbox" id="projectFilter" checked>
+                    <span class="checkmark">✓</span>
+                </label>
             </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    
-                </div>
+                <!-- Project cards will be dynamically rendered here by JavaScript -->
             </div>
         </div>
     </section>
@@ -222,48 +239,304 @@
             </h2>
 
             <div class="career-timeline">
-                <!-- IoT 보안 연구실 -->
                 <div class="career-item">
                     <div class="company-logo">
                         <img src="/images/logo.jpg.png" alt="IoT Security Lab">
                     </div>
                     <div class="career-content">
                         <h3>IoT Security Lab</h3>
-                        <span class="period">2023.03 - 2024.10 (1년 8개월)</span>
-                        <div class="description">"차세대 이동통신 보안 기술 연구 및 개발"</div>
-                        
-                        <div class="role-tags">
-                            <span class="role-tag">연구원</span>
-                            <span class="role-tag">정보보안</span>
-                            <span class="role-tag">암호모듈 개발</span>
-                        </div>
+                        <span class="career-period">2024.05 - 재직 중</span>
+                        <p class="career-description">"차세대 이동통신 보안 기술 및 PQC 연구 및 개발"</p>
+                        <p class="career-subtitle">연구원</p>
+                        <p class="career-subtitle">정보보안</p>
+                        <p class="career-subtitle">암호모듈 개발</p>
 
-                        <div class="projects">
+                        <div class="career-projects">
                             <div class="project-entry">
                                 <h4>5G 특화망 보안 취약점 분석 및 대응방안 연구</h4>
-                                <span class="project-period">2024.03 - 2024.10</span>
-                                <p>5G 특화망의 보안 취약점을 분석하고 이에 대한 대응 방안을 연구하여 안전한 통신 환경 구축</p>
+                                <span class="project-period">2024.05 - 2024.7</span>
+                                <p>5G 특화망의 보안 취약점을 분석하고 이에 대한 대응 방안으로써 QKD를 연구하여 안전한 통신 환경 구축</p>
                             </div>
 
                             <div class="project-entry">
-                                <h4>암호모듈 최적화 및 성능 개선</h4>
-                                <span class="project-period">2023.09 - 2024.02</span>
-                                <p>기존 암호모듈의 성능을 분석하고 최적화하여 처리 속도 30% 향상 달성</p>
+                                <h4>KCMVP 기반 CAVP 라이브러리 개발</h4>
+                                <span class="project-period">2024.11 - 2024.01</span>
+                                <p>기존 KCMVP 검증 암호모듈 알고리즘을 사용하여 한국형 CAVP 라이브러리 개발</p>
                             </div>
 
                             <div class="project-entry">
-                                <h4>IoT 디바이스 보안 프로토콜 개발</h4>
-                                <span class="project-period">2023.03 - 2023.08</span>
-                                <p>IoT 디바이스의 안전한 통신을 위한 경량화 보안 프로토콜 설계 및 구현</p>
+                                <h4>5G 상용망과 Military BcN 연동 시 보안 연구</h4>
+                                <span class="project-period">2024.10 - 2024.12</span>
+                                <p>양자암호모듈 기반의 qSIM 인증 체계 방법 연구 및 구현</p>
+                                <p>안전한 인증 채널 구성을 위한 SSL-VPN 적용 시 KCMVP 암호 알고리즘과 연동</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- 추가 경력... -->
             </div>
         </div>
     </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="awards-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">🏆</span>
+                AWARDS
+            </h2>
+            <div class="awards-grid">
+                <!-- Award Card 1 -->
+                <div class="award-card">
+                    <div class="award-year">2024</div>
+                    <div class="award-content">
+                        <div class="award-icon">🏆</div>
+                        <h3 class="award-title">논문 우수상</h3>
+                        <p class="award-subtitle">2024년 정보보호학회 동계 학술대회</p>
+                        <div class="award-details">
+                            <p>차세대 Military-BcN 5G 상용망 연동 시 모바일 업무 환경 보안 기법 연구</p>
+                            <p class ="school-name">정보보호 학회장상 수상</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Award Card 2 -->
+                <div class="award-card">
+                    <div class="award-year">2024</div>
+                    <div class="award-content">
+                        <div class="award-icon">🥈</div>
+                        <h3 class="award-title">은상</h3>
+                        <p class="award-subtitle">NCCOSS 경진대회</p>
+                        <div class="award-details">
+                            <p>QKD 기반의 양자보안방법 연구</p>
+                            <p class = "school-name">COSS 협의회장상 수상</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional award cards can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Friends Section -->
+    <section id="friends" class="friends-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">👥</span>
+                FRIENDS
+            </h2>
+            <div class="friends-grid">
+                <!-- Friend Card 1 -->
+                <div class="friend-card">
+                    <div class="friend-image">
+                        <img src="/api/placeholder/150/150" alt="Friend 1">
+                    </div>
+                    <div class="friend-info">
+                        <h3 class="friend-name">김영솔</h3>
+                        <p class="friend-title">야망의 야가다꾼</p>
+                        <div class="friend-details">
+                            <span class="friend-company">아버지 회사</span>
+                            <span class="friend-location">경기도 안산</span>
+                        </div>
+                        <div class="friend-skills">
+                            <span class="skill-tag">망치질</span>
+                            <span class="skill-tag">3공수</span>
+                            <span class="skill-tag">대마안나기</span>
+                        </div>
+                        <div class="friend-social">
+                            <a href="#" class="social-link">GitHub</a>
+                            <a href="#" class="social-link">Blog</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Friend Card 2 -->
+                <div class="friend-card">
+                    <div class="friend-image">
+                        <img src="/api/placeholder/150/150" alt="Friend 2">
+                    </div>
+                    <div class="friend-info">
+                        <h3 class="friend-name">조영주</h3>
+                        <p class="friend-title">내 꿈은 호주 요리사</p>
+                        <div class="friend-details">
+                            <span class="friend-company">그 호주 식당 이르뭐더라</span>
+                            <span class="friend-location">경기도 안산</span>
+                        </div>
+                        <div class="friend-skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Next.js</span>
+                        </div>
+                        <div class="friend-social">
+                            <a href="#" class="social-link">GitHub</a>
+                            <a href="#" class="social-link">Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Friend Card 3 -->
+                <div class="friend-card">
+                    <div class="friend-image">
+                        <img src="/api/placeholder/150/150" alt="Friend 3">
+                    </div>
+                    <div class="friend-info">
+                        <h3 class="friend-name">최효승</h3>
+                        <p class="friend-title">79대포 대표</p>
+                        <div class="friend-details">
+                            <span class="friend-company">79대포</span>
+                            <span class="friend-location">경기도 안산</span>
+                        </div>
+                        <div class="friend-skills">
+                            <span class="skill-tag">김치전</span>
+                            <span class="skill-tag">롤체하기</span>
+                            <span class="skill-tag">술 팔기</span>
+                        </div>
+                        <div class="friend-social">
+                            <a href="#" class="social-link">LinkedIn</a>
+                            <a href="#" class="social-link">Blog</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Friend Card 4 -->
+                <div class="friend-card">
+                    <div class="friend-image">
+                        <img src="/api/placeholder/150/150" alt="Friend 3">
+                    </div>
+                    <div class="friend-info">
+                        <h3 class="friend-name">신민석</h3>
+                        <p class="friend-title">Fullstack Developer</p>
+                        <div class="friend-details">
+                            <span class="friend-company">인천대학교</span>
+                            <span class="friend-location">경기도 안산</span>
+                        </div>
+                        <div class="friend-skills">
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">Spring</span>
+                            <span class="skill-tag">DB</span>
+                        </div>
+                        <div class="friend-social">
+                            <a href="#" class="social-link">LinkedIn</a>
+                            <a href="#" class="social-link">Blog</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Friend Card 5 -->
+                <div class="friend-card">
+                    <div class="friend-image">
+                        <img src="/api/placeholder/150/150" alt="Friend 3">
+                    </div>
+                    <div class="friend-info">
+                        <h3 class="friend-name">이종평</h3>
+                        <p class="friend-title">미래의 변리사</p>
+                        <div class="friend-details">
+                            <span class="friend-company">회게 법인</span>
+                            <span class="friend-location">경기도 안산</span>
+                        </div>
+                        <div class="friend-skills">
+                            <span class="skill-tag">법 외우기</span>
+                            <span class="skill-tag">특허 훔치기</span>
+                            <span class="skill-tag">?</span>
+                        </div>
+                        <div class="friend-social">
+                            <a href="#" class="social-link">LinkedIn</a>
+                            <a href="#" class="social-link">Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memories Section -->
+    <section id="memories" class="memories-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">📸</span>
+                MEMORIES
+            </h2>
+            <div class="memories-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="2025">2025</button>
+                <button class="filter-btn" data-filter="2024">2024</button>
+                <button class="filter-btn" data-filter="lab">학회</button>
+                <button class="filter-btn" data-filter="contest">대회</button>
+            </div>
+            <div class="memories-grid">
+                <!-- Memory Card 1 -->
+                <div class="memory-card" data-category="2024 lab">
+                    <img src="./images/memories_album/award_1.JPG" alt="#" class="memory-img">
+                    <div class="memory-overlay">
+                        <h3>정보보호학회</h3>
+                        <p>2024 동계 학술대회 논문 우수상</p>
+                        <span class="memory-date">2024.11.28</span>
+                    </div>
+                </div>
+                <!-- Memory Card 2 -->
+                <div class="memory-card" data-category="2024 contest">
+                    <img src="./images/memories_album/award_2.JPG" alt="#" class="memory-img">
+                    <div class="memory-overlay">
+                        <h3>NCCOSS 경진대회</h3>
+                        <p>COSS 협의회장 상</p>
+                        <span class="memory-date">2024.11.22</span>
+                    </div>
+                </div>
+
+                <!-- Memory Card 7 -->
+                <div class="memory-card" data-category="2024 contest">
+                    <img src="./images/memories_album/journal_taken.JPG" alt="#" class="memory-img">
+                    <div class="memory-overlay">
+                        <h3>NCCOSS 경진대회</h3>
+                        <p>경진 대회</p>
+                        <span class="memory-date">2024.11</span>
+                    </div>
+                </div>
+
+                <!-- Memory Card 4 -->
+                <div class="memory-card" data-category="2024 contest">
+                    <img src="./images/memories_album/co_show.JPEG" alt="#" class="memory-img">
+                    <div class="memory-overlay">
+                        <h3>NCCOSS 경진대회</h3>
+                        <p>경진 대회</p>
+                        <span class="memory-date">2024.11</span>
+                    </div>
+                </div>
+                
+                <!-- Memory Card 5 -->
+                <div class="memory-card" data-category="2024 contest">
+                    <img src="./images/memories_album/coshow_presentation.JPEG" alt="#" class="memory-img">
+                    <div class="memory-overlay">
+                        <h3>NCCOSS 경진대회</h3>
+                        <p>경진 대회</p>
+                        <span class="memory-date">2024.11</span>
+                    </div>
+                </div>
+
+                <!-- Memory Card 6 -->
+                <div class="memory-card" data-category="2024 contest">
+                    <img src="./images/memories_album/journal_presentation.JPG" alt="#" class="memory-img">
+                    <div class="memory-overlay">
+                        <h3>NCCOSS 경진대회</h3>
+                        <p>경진 대회</p>
+                        <span class="memory-date">2024.11</span>
+                    </div>
+                </div>
+
+                <!-- Memory Card 3 -->
+                <div class="memory-card" data-category="2024 lab">
+                    <img src="./images/memories_album/summer_journal.JPG" alt="#" class="memory-img">
+                    <div class="memory-overlay">
+                        <h3>정보통신학회</h3>
+                        <p>IoT lab 일상</p>
+                        <span class="memory-date">2024.06</span>
+                    </div>
+                </div>
+
+
+                <!-- Additional memory cards can be added here -->
+            </div>
+        </div>
+    </section>
+
 
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top">↑</button>
