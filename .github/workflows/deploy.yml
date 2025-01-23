@@ -1,1 +1,23 @@
+name: Deploy to Raspberry Pi
 
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Deploy to Raspberry Pi
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.PI_HOST }}
+          username: ${{ secrets.PI_USERNAME }}
+          key: ${{ secrets.PI_SSH_KEY }}
+          port: ${{ secrets.PI_PORT }}
+          script: |
+            cd /home/pi/your-project
+            git pull origin main
+            # 추가 필요한 명령어 (npm install, pm2 restart 등)
