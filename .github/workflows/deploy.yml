@@ -18,6 +18,6 @@ jobs:
           key: ${{ secrets.PI_SSH_KEY }}
           port: ${{ secrets.PI_PORT }}
           script: |
-            cd /home/pi/your-project
+            cd /var/www/html/boomWin_portfolio
             sudo -n git pull origin main
             # 필요한 경우 다른 명령어에도 sudo 추가
